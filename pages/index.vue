@@ -22,9 +22,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .bg-home{
-  background: url('~assets/bg-home.jpg');
+  background: linear-gradient(180deg,#172c57,rgba(23,44,87,.75) 65%,rgba(23,44,87,0)), url('~assets/bg-home.jpg');
   background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  &>*{
+flex-basis: 100%;
+  }
 }
 </style>

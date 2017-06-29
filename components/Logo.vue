@@ -13,6 +13,6 @@ export default {
 .card{
   text-align: center;
   border: none;
-  background: linear-gradient(180deg,#172c57,rgba(23,44,87,.75) 75%,rgba(23,44,87,0));
+background: transparent;
 }
 </style>

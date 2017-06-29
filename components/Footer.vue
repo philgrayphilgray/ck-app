@@ -12,8 +12,11 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .row{
   text-align: center;
+}
+.card{
+    background: rgba(255, 255, 255, .8);
 }
 </style>
