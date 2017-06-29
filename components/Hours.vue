@@ -136,7 +136,7 @@ export default {
           ] // times
         } // sat
       ], // days
-      selected: 'W', // selected
+      selected: '', // selected
       closedMsg: 'Closed.',
       menus: [
         {
@@ -180,8 +180,18 @@ export default {
       let currentPos = this.days.indexOf(this.days.find((day) => day.abbr == current))
       const prev = this.days[currentPos < 1 ? currentPos + 6 : currentPos - 1].abbr
       this.selected = prev
+    },
+    setDay () {
+      const dayIndex = new Date().getDay()
+      const dayAbbr = this.days[dayIndex].abbr
+      this.selected = dayAbbr
     }
-  } // methods
+  }, // methods
+  created () {
+    if (!this.selected) {
+      this.setDay()
+    }
+  } // really need to study the component lifecycle
 } // export
 </script>
 
